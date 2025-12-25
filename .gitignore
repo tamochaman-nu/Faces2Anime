@@ -1,0 +1,6 @@
+.git
+.idea
+
+data/
+
+docker-compose.yml
