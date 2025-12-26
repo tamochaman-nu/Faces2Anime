@@ -1,6 +1,6 @@
 numpy == 1.18.0
 scikit-image == 0.14.5
-tensorflow == 1.13.0
+tensorflow == 1.13.1
 
 opencv-python
 pillow
