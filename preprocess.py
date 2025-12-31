@@ -1,16 +1,12 @@
-import tqdm
-import importlib.util
-import sys
+import os
 
+from submodules.whitebox_cartoonization.test_code import cartoonize
 
-# 'test/cartoonize.py'のフルパスを指定
-cartoonize_path = 'White-box-Cartoonization/test_code/cartoonize.py'
+if __name__ == "__main__":
+    model_path = "submodules/whitebox_cartoonization/test_code/saved_models"
+    load_image_path = "data/structure"
+    save_image_path = "data/cartoonized-structure"
 
-# モジュールを動的にインポート
-spec = importlib.util.spec_from_file_location("cartoonize", cartoonize_path)
-cartoonize = importlib.util.module_from_spec(spec)
-sys.modules["cartoonize"] = cartoonize
-spec.loader.exec_module(cartoonize)
-
-# cartoonize内の関数を使用
-cartoonize.cartoonize_function_or_class()
+    if os.path.exists(save_image_path):
+        os.mkdir(save_image_path)
+    cartoonize(load_image_path, save_image_path, model_path)

@@ -1,6 +1,6 @@
-[submodule "submodules/swapping-ae"]
-	path = submodules/swapping-ae
-	url = https://github.com/taesungp/swapping-autoencoder-pytorch.git
-[submodule "whitebox-cartoonization"]
-	path = whitebox-cartoonization
+[submodule "submodules/whitebox_cartoonization"]
+	path = submodules/whitebox_cartoonization
 	url = https://github.com/SystemErrorWang/White-box-Cartoonization.git
+[submodule "submodules/swapping_ae"]
+	path = submodules/swapping_ae
+	url = https://github.com/taesungp/swapping-autoencoder-pytorch.git
