@@ -7,6 +7,6 @@ if __name__ == "__main__":
     load_image_path = "data/structure"
     save_image_path = "data/cartoonized-structure"
 
-    if os.path.exists(save_image_path):
+    if not os.path.exists(save_image_path):
         os.mkdir(save_image_path)
-    cartoonize(load_image_path, save_image_path, model_path)
+    cartoonize.cartoonize(load_image_path, save_image_path, model_path)
