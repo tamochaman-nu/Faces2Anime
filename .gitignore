@@ -2,6 +2,7 @@
 .idea
 
 data/
+model/pretrained/
 
 *.pth
 docker-compose.yml

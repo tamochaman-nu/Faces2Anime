@@ -1,4 +1,4 @@
-FROM nvidia/cuda:11.8.0-cudnn8-devel-ubuntu22.04
+FROM nvidia/cuda:11.7.1-cudnn8-devel-ubuntu22.04
 
 # update and install apt packages
 RUN apt update && apt-get install -y \
@@ -26,7 +26,7 @@ ENV PATH /opt/miniconda3/bin:$PATH
 RUN conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/main
 RUN conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/r
 
-# create conda environment
+# create conda environmen
 RUN conda create -n Faces2Anime python=3.7
 RUN conda init
 RUN echo "conda activate Faces2Anime" >> ~/.bashrc
